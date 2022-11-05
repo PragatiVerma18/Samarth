@@ -1,8 +1,12 @@
-# Samarth
+![Logo](https://i.imgur.com/dF6rfCI.png)
+<center>
 Democratising Credit. Empowering India
 
+<br>
 Samarth is one stop solution for SMEs to get instant loans in less than 5 min. Making credit lending process as easy as cooking maggie.
+</center>
 <hr>
+
 ### Links
 - Developer branches: [Frontend](https://github.com/PragatiVerma18/Samarth/tree/frontend), [Backend](https://github.com/PragatiVerma18/Samarth/tree/backend)
 - LivePreview: [here]()
