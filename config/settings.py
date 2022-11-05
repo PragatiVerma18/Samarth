@@ -48,6 +48,8 @@ INSTALLED_APPS = [
 
     'dj_rest_auth.registration', 
     'dj_rest_auth',
+    
+    'loan',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
