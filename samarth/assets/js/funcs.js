@@ -36,6 +36,8 @@ function get_all_txns() {
         .then(result => {
             document.getElementById('invoices').style.visibility = 'visible'
             document.getElementById('invoices').style.display = 'block'
+            document.getElementById('loans').style.visibility = 'hidden'
+            document.getElementById('loans').style.display = 'None'
             var txns_ul = document.getElementById('txns')
             result.txns.forEach(element => {
                 var new_ol = document.createElement('li')
@@ -107,6 +109,7 @@ function get_custom_offers() {
             document.getElementById('loans').style.visibility = 'visible'
             document.getElementById('loans').style.display = 'block'
             var parent = document.getElementById('offers')
+            parent.innerHTML=""
             result.offers.forEach(element => {
                 console.log(element)
                 var temp_div = document.createElement('div')
