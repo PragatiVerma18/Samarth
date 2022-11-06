@@ -133,6 +133,7 @@ function get_custom_offers() {
                 details.className = 'col-md-6'
                 details.innerHTML = "<b>Interest:&nbsp</b>" + element.interest + "<br><b>Ratings:&nbsp</b>" + element.ratings
 
+                card_body.innerHTML += `<label class="checkbox"> <input type="checkbox" /> <span class="success"></span></label>`
                 temp_div.appendChild(card_body)
                 temp_div.appendChild(details)
                 parent.appendChild(temp_div)
