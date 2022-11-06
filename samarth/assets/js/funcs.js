@@ -13,9 +13,36 @@ function get_all_loans() {
     };
 
     fetch(host_url + "/loan", requestOptions)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(result => {
-
+            var my_loans = document.getElementById('my-loans');
+            const sortedresults = result.loans.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+            sortedresults.forEach(element => {
+                console.log(element)
+                var loan_card = document.createElement('div');
+                loan_card.className = 'col-md-4';
+                loan_card.innerHTML = `<div class="card p-3 mb-2">
+                <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                <div class="ms-2 c-details">
+                <h6 class="mb-0">${element.name}</h6> <small><span>(${element.uuid})</span></small>
+                </div>
+                </div>
+                <div class="badge"> <span>${element.due_date}</span> </div>
+                </div>
+                <div class="mt-5">
+                <h3 class="heading">&#8377; ${element.value}</h3>
+                <div class="mt-5">
+                <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="mt-3"> <span class="text1">3 <span class="text2">of 6 Installments Paid</span></span> </div>
+                </div>
+                </div>
+                </div>
+                `
+                my_loans.appendChild(loan_card);
+            });
         })
         .catch(error => console.log('error', error));
 }
@@ -99,7 +126,6 @@ function get_custom_offers() {
         body: raw,
         redirect: 'follow'
     };
-
     fetch(host_url + "/loan/offers", requestOptions)
         .then(response => response.json())
         .then(result => {
@@ -109,23 +135,23 @@ function get_custom_offers() {
             document.getElementById('loans').style.visibility = 'visible'
             document.getElementById('loans').style.display = 'block'
             var parent = document.getElementById('offers')
-            parent.innerHTML=""
+            parent.innerHTML = ""
             result.offers.forEach(element => {
                 console.log(element)
                 var temp_div = document.createElement('div')
-                temp_div.className="card mr-3"
+                temp_div.className = "card mr-3"
 
                 var img = document.createElement('img')
                 img.src = element.logo
                 img.class = "card-img-top"
-                
+
                 temp_div.appendChild(img)
 
-                var card_body= document.createElement('div')
-                card_body.className='card-body'
+                var card_body = document.createElement('div')
+                card_body.className = 'card-body'
 
                 var heading = document.createElement('h5')
-                heading.className='card-title'
+                heading.className = 'card-title'
                 heading.innerHTML = element.name
                 card_body.appendChild(heading)
 
@@ -133,7 +159,13 @@ function get_custom_offers() {
                 details.className = 'col-md-6'
                 details.innerHTML = "<b>Interest:&nbsp</b>" + element.interest + "<br><b>Ratings:&nbsp</b>" + element.ratings
 
-                card_body.innerHTML += `<label class="checkbox"> <input type="checkbox" /> <span class="success"></span></label>`
+                var submit = document.createElement('a')
+                submit.className = 'btn'
+                submit.href = "success.html"
+                submit.innerHTML = "Get"
+                submit.onclick = function () { new_loan(element.name); };
+
+                card_body.appendChild(submit)
                 temp_div.appendChild(card_body)
                 temp_div.appendChild(details)
                 parent.appendChild(temp_div)
@@ -142,7 +174,29 @@ function get_custom_offers() {
         .catch(error => console.log('error', error));
 }
 
+function new_loan(name) {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+        "name": name,
+        "value": int(document.getElementById('amount').value),
+        "days": int(document.getElementById('tenure').value)
+    });
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("https://samarth-india.herokuapp.com/loan/new", requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+}
 
 window.onload = () => {
-    
+    get_all_loans()
 }

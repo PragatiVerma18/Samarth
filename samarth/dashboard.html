@@ -4,20 +4,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Samarth</title>
+        <title>Dashboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
         <!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
         <link rel="stylesheet" href="assets/css/slicknav.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
         <link rel="stylesheet" href="assets/css/animate.min.css">
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
         <link rel="stylesheet" href="assets/css/themify-icons.css">
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
@@ -57,9 +56,9 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a href="dashboard.html">My Loans</a></li>
-                                                <li><a href="index.html#about">About</a></li>
+                                                <li><a href="index.html#services">About</a></li>
                                                 <li><a href="index.html#services">Services</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li class="active"><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -78,11 +77,26 @@
             </div>
             <!-- Header End -->
         </header>
-        <main class="d-flex justify-content-center m-5">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ya4ycrti.json" background="transparent"
-                speed="1" style="width: 700px; height: 700px;" loop autoplay></lottie-player>
+        <main>
 
+            <!-- Hero Start-->
+            <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center pt-50">
+                                <h2>Dashboard</h2>
+                                <h3>All your Loan Records at a unified place!</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Hero End -->
+            <div class="container mt-5 mb-3">
+                <div class="row" id="my-loans">
+                </div>
+            </div>
         </main>
         <footer>
             <!-- Footer Start-->
@@ -173,9 +187,8 @@
         <div id="back-top">
             <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
         </div>
-
-
         <!-- JS here -->
+        <script src="./assets/js/funcs.js"></script>
         <!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
         <!-- Jquery, Popper, Bootstrap -->
@@ -191,11 +204,11 @@
         <!-- One Page, Animated-HeadLin -->
         <script src="./assets/js/wow.min.js"></script>
         <script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
 
         <!-- Nice-select, sticky -->
         <script src="./assets/js/jquery.nice-select.min.js"></script>
         <script src="./assets/js/jquery.sticky.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
 
         <!-- contact js -->
         <script src="./assets/js/contact.js"></script>
