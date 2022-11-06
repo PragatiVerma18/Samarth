@@ -62,14 +62,11 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li class="active"><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="#about">About</a></li>
+                                                <li><a href="#services">Services</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
-                                    </div>
-                                    <div class="header-right-btn f-right d-none d-lg-block">
-                                        <a href="#application-area" class="btn header-btn">Apply Now! </a>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +165,7 @@
             </div>
             <!-- slider Area End-->
             <!-- About Law Start-->
-            <div class="about-low-area section-padding2">
+            <div id="about" class="about-low-area section-padding2">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
@@ -183,7 +180,7 @@
                                     laboris nisi ut aliquip exeaoauat. Duis aute irure dolor in reprehe.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt
                                     ut labore et dolore magna aliq.</p>
-                                <a href="apply.html" class="btn">Apply for Loan</a>
+                                <a href="#application-area" class="btn">Apply for Loan</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12">
@@ -202,7 +199,7 @@
             </div>
             <!-- About Law End-->
             <!-- Services Area Start -->
-            <div class="services-area pt-150 pb-150" data-background="assets/img/gallery/section_bg02.jpg">
+            <div id="services" class="services-area pt-150 pb-150" data-background="assets/img/gallery/section_bg02.jpg">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-6 col-md-10">
@@ -286,31 +283,18 @@
                             <form action="#" class="search-box">
                                 <div class="select-form">
                                     <div class="select-itms">
-                                        <select name="select" id="select1">
-                                            <option value="">Select Amount</option>
-                                            <option value="">&#8377; 120</option>
-                                            <option value="">&#8377; 700</option>
-                                            <option value="">&#8377; 750</option>
-                                            <option value="">&#8377; 250</option>
-                                        </select>
+                                        <label class="text-white"> Amount </label>
+                                        <input name="select" placeholder="&#8377;10000" />
                                     </div>
                                 </div>
                                 <div class="select-form">
                                     <div class="select-itms">
-                                        <select name="select" id="select1">
-                                            <option value="">Duration</option>
-                                            <option value="">7 Days</option>
-                                            <option value="">10 Days</option>
-                                            <option value="">14 Days</option>
-                                            <option value="">20 Days</option>
-                                        </select>
+                                        <label class="text-white"> Duration </label>
+                                        <input name="select" id="tenure" placeholder="Number of days" />
                                     </div>
                                 </div>
-                                <div class="input-form">
-                                    <input type="text" placeholder="Interest Rate">
-                                </div>
                                 <div class="search-form">
-                                    <a href="apply.html">Apply for Loan</a>
+                                    <a href="#invoices" onclick=get_all_txns()>Apply for Loan</a>
                                 </div>
                             </form>
                         </div>
@@ -319,7 +303,7 @@
             </div>
             <!-- Application Area End -->
             <!--Team Ara Start -->
-            <div class="team-area section-padding30">
+            <div id="invoices" class="team-area section-padding30" style="visibility:hidden; display:none">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -333,14 +317,14 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 offset-md-3">
+                            <div class="center col-md-8 offset-md-2">
                                 <div class="card" style="margin:50px 0">
                                     <ul id="txns" class="list-group list-group-flush">
                                         
                                     </ul>
                                 </div>
                                 <div class="header-right-btn m-auto center d-none d-lg-block">
-                                    <a href="apply.html" class="btn header-btn"> Next</a>
+                                    <a href="#loans" class="btn header-btn" onclick=get_custom_offers()> Next</a>
                                 </div>
                             </div>
                         </div>
@@ -348,126 +332,24 @@
                 </div>
             </div>
             <!-- Team Ara End -->
-            <!-- Testimonial Start -->
-            <div class="testimonial-area t-bg testimonial-padding">
-                <div class="container ">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-xl-11 col-lg-11 col-md-9">
-                            <div class="h1-testimonial-active">
-                                <!-- Single Testimonial -->
-                                <div class="single-testimonial text-center">
-                                    <!-- Testimonial Content -->
-                                    <div class="testimonial-caption ">
-                                        <div class="testimonial-top-cap">
-                                            <img src="assets/img/gallery/testimonial.png" alt="">
-                                            <p>Logisti Group is a representative logistics operator providing full range
-                                                of ser
-                                                of customs clearance and transportation worl.</p>
-                                        </div>
-                                        <!-- founder -->
-                                        <div
-                                            class="testimonial-founder d-flex align-items-center justify-content-center">
-                                            <div class="founder-img">
-                                                <img src="assets/img/testmonial/Homepage_testi.png" alt="">
-                                            </div>
-                                            <div class="founder-text">
-                                                <span>Jessya Inn</span>
-                                                <p>Co Founder</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Testimonial -->
-                                <div class="single-testimonial text-center">
-                                    <!-- Testimonial Content -->
-                                    <div class="testimonial-caption ">
-                                        <div class="testimonial-top-cap">
-                                            <img src="assets/img/gallery/testimonial.png" alt="">
-                                            <p>Logisti Group is a representative logistics operator providing full range
-                                                of ser
-                                                of customs clearance and transportation worl.</p>
-                                        </div>
-                                        <!-- founder -->
-                                        <div
-                                            class="testimonial-founder d-flex align-items-center justify-content-center">
-                                            <div class="founder-img">
-                                                <img src="assets/img/testmonial/Homepage_testi.png" alt="">
-                                            </div>
-                                            <div class="founder-text">
-                                                <span>Jessya Inn</span>
-                                                <p>Co Founder</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div id="loans" class="apply-area pt-150 pb-150" style="visibility:hidden; display:none">
+                <div class="container">
+                    <div id="offers" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                        
                     </div>
+
+                </div>
+                <!-- /.container -->
+                <div class="header-right-btn m-0 text-center d-none d-lg-block">
+                    <a href="success.html" class="btn header-btn"> Submit</a>
                 </div>
             </div>
-            <!-- Testimonial End -->
 
         </main>
         <footer>
             <!-- Footer Start-->
             <div class="footer-area">
                 <div class="container">
-                    <div class="footer-top footer-padding">
-                        <div class="row justify-content-between">
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                                <div class="single-footer-caption mb-50">
-                                    <div class="single-footer-caption mb-30">
-                                        <!-- logo -->
-                                        <div class="footer-logo">
-                                            <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                        </div>
-                                        <div class="footer-pera">
-                                            <p>Democratising Credit For the New India</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                                <div class="single-footer-caption mb-50">
-                                    <div class="footer-tittle">
-                                        <h4>Quick Link</h4>
-                                        <ul>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Offers & Discounts</a></li>
-                                            <li><a href="#">Get Coupon</a></li>
-                                            <li><a href="#"> Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div class="single-footer-caption mb-50">
-                                    <div class="footer-tittle">
-                                        <h4>New Products</h4>
-                                        <ul>
-                                            <li><a href="#">MUDRA Loans</a></li>
-                                            <li><a href="#">Startup Loans</a></li>
-                                            <li><a href="#">Loan Offers</a></li>
-                                            <li><a href="#">Exclusive Loans</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                                <div class="single-footer-caption mb-50">
-                                    <div class="footer-tittle">
-                                        <h4>Support</h4>
-                                        <ul>
-                                            <li><a href="#">Frequently Asked Questions</a></li>
-                                            <li><a href="#">Terms & Conditions</a></li>
-                                            <li><a href="#"> Privacy Policy</a></li>
-                                            <li><a href="#">Report a Payment Issue</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="footer-bottom">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-9 col-lg-8">
