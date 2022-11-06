@@ -280,20 +280,21 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-9 col-xl-8">
                             <!--Hero form -->
-                            <form action="#" class="search-box">
-                                <div class="select-form">
+                            <form action="#" class="form-inline">
+                                <div class="form-group mb-2">
                                     <div class="select-itms">
                                         <label class="text-white"> Amount </label>
-                                        <input name="select" placeholder="&#8377;10000" />
+                                        <input name="select" class="form-control form-control-lg" placeholder="&#8377;10000" />
                                     </div>
                                 </div>
-                                <div class="select-form">
+                                <div class="form-group mx-sm-3 mb-2">
                                     <div class="select-itms">
                                         <label class="text-white"> Duration </label>
-                                        <input name="select" id="tenure" placeholder="Number of days" />
+                                        <input name="select" class="form-control form-control-lg" id="tenure" placeholder="Number of days" />
                                     </div>
                                 </div>
-                                <div class="search-form">
+                                <div class="form-group btn hero-btn" data-animation="fadeInLeft"
+                                    data-delay=".8s">
                                     <a href="#invoices" onclick=get_all_txns()>Apply for Loan</a>
                                 </div>
                             </form>
@@ -334,15 +335,15 @@
             <!-- Team Ara End -->
             <div id="loans" class="apply-area pt-150 pb-150" style="visibility:hidden; display:none">
                 <div class="container">
-                    <div id="offers" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                        
+                    <div id="offers" class="card-deck">
+                    </div>
+                    <div class="header-right-btn my-3 text-center d-none d-lg-block">
+                        <a href="success.html" class="btn header-btn"> Submit</a>
+                    </div>
                     </div>
 
                 </div>
                 <!-- /.container -->
-                <div class="header-right-btn m-0 text-center d-none d-lg-block">
-                    <a href="success.html" class="btn header-btn"> Submit</a>
-                </div>
             </div>
 
         </main>

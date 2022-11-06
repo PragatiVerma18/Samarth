@@ -110,7 +110,7 @@ function get_custom_offers() {
             result.offers.forEach(element => {
                 console.log(element)
                 var temp_div = document.createElement('div')
-                temp_div.className="col card mb-4"
+                temp_div.className="card mr-3"
                 // <div class="col mb-4">
                 //     <div class="card">
                 //         <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
@@ -133,12 +133,13 @@ function get_custom_offers() {
                 card_body.className='card-body'
 
                 var heading = document.createElement('h5')
+                heading.className='card-title'
                 heading.innerHTML = element.name
                 card_body.appendChild(heading)
 
                 var details = document.createElement('div')
                 details.className = 'col-md-6'
-                details.innerHTML = "<b>Intereset:&nbsp</b>" + element.interest + "<br><b>Ratings:&nbsp</b>" + element.ratings
+                details.innerHTML = "<b>Interest:&nbsp</b>" + element.interest + "<br><b>Ratings:&nbsp</b>" + element.ratings
 
                 temp_div.appendChild(card_body)
                 temp_div.appendChild(details)
