@@ -111,17 +111,6 @@ function get_custom_offers() {
                 console.log(element)
                 var temp_div = document.createElement('div')
                 temp_div.className="card mr-3"
-                // <div class="col mb-4">
-                //     <div class="card">
-                //         <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-                //         <div class="card-body">
-                //             <h5 class="card-title">Card title</h5>
-                //             <p class="card-text">This is a longer card with supporting text below as a natural
-                //                 lead-in to
-                //                 additional content. This content is a little bit longer.</p>
-                //         </div>
-                //     </div>
-                // </div>
 
                 var img = document.createElement('img')
                 img.src = element.logo
