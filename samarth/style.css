@@ -93,3 +93,11 @@
   .checkbox input:checked+.danger:after {
       border-color: #f44336
   }
+
+.overlay {
+background: url("https://indiacsr.in/wp-content/uploads/2020/11/MSMECCI-at-India-CSR-Network.jpg") 0 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: hsl(200, 2%, 58%);
+    background-blend-mode: multiply;
+  }
