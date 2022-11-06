@@ -9,7 +9,8 @@ Samarth is one stop solution for SMEs to get instant loans in less than 5 min. M
 
 ### Links
 - Developer branches: [Frontend](https://github.com/PragatiVerma18/Samarth/tree/frontend), [Backend](https://github.com/PragatiVerma18/Samarth/tree/backend)
-- LivePreview: [here]()
+- LivePreview: [here](https://samarth-in.netlify.app/)
+- Presentation link: [here](https://www.canva.com/design/DAFRI2Tfn_c/rXBPiyK1PE5T0GBfyTNFYA/edit?utm_content=DAFRI2Tfn_c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
 ### Problem
